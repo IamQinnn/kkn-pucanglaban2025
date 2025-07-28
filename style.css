@@ -1,57 +1,64 @@
+/* Reset dan font dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: #fff;
+  background: #f8f9fa;
   color: #333;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  line-height: 1.6;
 }
 
 header {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #006400;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar {
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.navbar a {
+nav a {
+  color: #fff;
   text-decoration: none;
-  color: #333;
-  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: background 0.3s;
 }
 
-.navbar a:hover {
-  color: #0077cc;
+nav a:hover {
+  background: #004d00;
+  border-radius: 5px;
 }
 
-main.home {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 1.8rem;
+main {
+  padding: 2rem;
 }
 
 footer {
-  margin-top: 50px;
+  background: #222;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background: #f1f1f1;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
 }
