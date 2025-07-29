@@ -423,9 +423,6 @@ header .navbar {
   resize: vertical;
 }
 
-.contact-section .contact-form .form-input:focus {
-  border-color: var(--secondary-color);
-}
 
 .contact-section .contact-form .submit-button {
   padding: 10px 28px;
