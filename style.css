@@ -88,54 +88,94 @@ section .section-title::after {
 
 /* Navbar styling */
 header {
-  z-index: 5;
-  width: 100%;
-  position: fixed;
-  background: var(--primary-color);
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-header .navbar {
+header {
+  background: #004d40;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
   display: flex;
-  padding: 20px;
-  align-items: center;
-  margin: 0 auto;
   justify-content: space-between;
-  max-width: var(--site-max-width);
+  align-items: center;
 }
 
-.navbar .nav-logo .logo-text {
-  color: var(--white-color);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
+.nav-logo .logo-text {
+  font-size: 1.3rem;
 }
 
-.navbar .nav-menu {
-  gap: 10px;
-  display: flex;
-}
-
-.navbar .nav-menu .nav-link {
-  padding: 10px 18px;
-  color: var(--white-color);
-  font-size: var(--font-size-m);
-  border-radius: var(--border-radius-m);
-  transition: 0.3s ease;
-}
-
-.navbar .nav-menu .nav-link:hover {
-  color: var(--primary-color);
-  background: var(--secondary-color);
-}
-
-.navbar :where(#menu-open-button, #menu-close-button) {
+.nav-menu {
   display: none;
+  flex-direction: column;
+  background: #004d40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  padding: 2rem 1rem;
+  z-index: 999;
+  transition: left 0.3s ease;
 }
 
-/* Hero section styling */
-.hero-section {
-  min-height: 100vh;
-  background: var(--primary-color);
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ccc;
 }
+
+#menu-open-button,
+#menu-close-button {
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav-menu a {
+    border: none;
+    padding: 0 1rem;
+  }
+
+  #menu-open-button,
+  #menu-close-button {
+    display: none;
+  }
+}
+
 
 .hero-section .section-content {
   display: flex;
