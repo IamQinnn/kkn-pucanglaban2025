@@ -462,11 +462,15 @@ header .navbar {
 .footer-section :where(.copyright-text, .social-link, .policy-link) {
   color: var(--white-color);
   transition: 0.2s ease;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-section .social-link-list {
   display: flex;
   gap: 25px;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-section .social-link-list .social-link {
