@@ -1,15 +1,19 @@
-const menuOpenBtn = document.getElementById("menu-open-button");
-const menuCloseBtn = document.getElementById("menu-close-button");
-const mobileMenu = document.getElementById("mobileMenu");
+const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
+const menuOpenButton = document.querySelector("#menu-open-button");
+const menuCloseButton = document.querySelector("#menu-close-button");
 
-menuOpenBtn.addEventListener("click", () => {
-  mobileMenu.style.display = "flex";
+menuOpenButton.addEventListener("click", () => {
+  // Toggle mobile menu visibility
+  document.body.classList.toggle("show-mobile-menu");
 });
 
-menuCloseBtn.addEventListener("click", () => {
-  mobileMenu.style.display = "none";
-});
+// Close menu when the close button is clicked
+menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 
+// Close menu when nav link is clicked
+navbarLinks.forEach((link) => {
+  link.addEventListener("click", () => menuOpenButton.click());
+});
 
 /* Initializing Swiper */
 let swiper = new Swiper(".slider-wrapper", {
