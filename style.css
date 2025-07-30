@@ -597,13 +597,6 @@ header .navbar {
     gap: 60px;
   }
 
-  .testimonials-section .slider-wrapper {
-    margin: 0 0 30px;
-  }
-
-  .testimonials-section .swiper-slide-button {
-    display: none;
-  }
 
   .footer-section .section-content {
   display: flex;
