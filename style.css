@@ -295,11 +295,45 @@ header .navbar {
   font-size: var(--font-size-m);
 }
 
-/* Testimonials section styling */
-.testimonials-section {
+/* Peta section styling */
+.peta-section {
   color: var(--white-color);
   background: var(--dark-color);
   padding: 50px 0 100px;
+}
+
+.peta-section .peta-list {
+  display: flex;
+  gap: 110px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.peta-section .peta-list .peta-item {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% / 3 - 110px);
+}
+
+.peta-section .peta-list .peta-item .peta-image {
+  width: 83%;
+  aspect-ratio: 1;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.peta-section .peta-list .peta-item .name {
+  margin: 12px 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+
+.peta-section .peta-list .peta-item .text {
+  font-size: var(--font-size-m);
 }
 
 
@@ -589,11 +623,13 @@ header .navbar {
 @media screen and (max-width: 640px) {
 
   .menu-section .menu-list .menu-item,
-  .gallery-section .gallery-list .gallery-item {
+  .gallery-section .gallery-list .gallery-item,
+  .peta-section .peta-list .peta-item{
     width: 100%;
   }
 
-  .menu-section .menu-list {
+  .menu-section .menu-list,
+  .peta-section .peta-list{
     gap: 60px;
   }
 
