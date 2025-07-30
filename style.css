@@ -298,7 +298,7 @@ header .navbar {
 /* Testimonials section styling */
 .testimonials-section {
   padding: 50px 0 100px;
-  background: var(--light-pink-color);
+  background: var(--dark-color);
 }
 
 .testimonials-section .slider-wrapper {
